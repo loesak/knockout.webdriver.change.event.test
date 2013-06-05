@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script src="lib/jquery-2.0.0.min.js"></script>
+		<script src="lib/knockout-2.2.1.js"></script>
+	</head>
+	<body>
+		<h2>
+			Type a value in the input below and click away to fire the change event.
+		</h2>
+		<input data-test-asset="input" type="text" name="text" data-bind="{ value: input }"/>
+		<h2>
+			Input value is &quot;<span data-test-asset="output" data-bind="{ text: input }"></span>&quot;
+		</h2>
+		<script type="text/javascript">
+			var vm = {
+				input: ko.observable()
+			};
+			
+			ko.applyBindings(vm);
+		</script>
+	</body>
+</html>
